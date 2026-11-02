@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HH AI Game Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+ <a class="brand" href="#"><span class="mark">HH</span><span><b>HH AI GAME STUDIO</b><small>IDEAS INTO WORLDS</small></span></a>
+ <div class="topright"><span id="apiStatus" class="api">Checking AI connection…</span><button id="saveProject" class="outline">Save project</button></div>
+</header>
+<div class="layout">
+ <aside class="sidebar">
+  <div class="side-label">WORKSPACE</div>
+  <button class="nav active" data-tool="game">✦ <span>Game creator</span></button>
+  <button class="nav" data-tool="world">▧ <span>World generator</span></button>
+  <button class="nav" data-tool="character">♙ <span>Character designer</span></button>
+  <button class="nav" data-tool="mission">⚑ <span>Mission creator</span></button>
+  <button class="nav" data-tool="mechanics">⚙ <span>Game mechanics</span></button>
+  <button class="nav" data-tool="code">⌘ <span>Prototype code AI</span></button>
+  <div class="side-bottom"><b>HH AI Studio</b><small>Version 1.0 · Web prototype</small></div>
+ </aside>
+
+ <main>
+  <section class="welcome">
+   <div><p class="eyebrow">YOUR CREATIVE GAME WORKSHOP</p><h1>Build a game with <em>AI.</em></h1>
+   <p class="muted">Describe what you imagine. Use the AI tools to plan worlds, characters, missions and prototype code.</p></div>
+   <div class="chip">✦ PROMPT-POWERED</div>
+  </section>
+
+  <section class="grid">
+   <div class="panel creator">
+    <div class="panel-title"><span id="toolNumber">01</span><div><h2 id="toolTitle">AI Game Creator</h2><p id="toolDesc">Turn your game idea into a complete design plan.</p></div></div>
+    <label for="prompt">YOUR PROMPT</label>
+    <textarea id="prompt" rows="7" placeholder="Describe the game you want AI to design...">Create a realistic 3D action game for Android and PC. Include human heroes, a large modern city, enemy AI, missions, vehicles, weapons, touch controls and optional co-op multiplayer.</textarea>
+    <div class="row">
+     <div><label for="genre">GAME TYPE</label><select id="genre"><option>Any</option><option>3D First-person shooter</option><option>Adventure</option><option>Racing</option><option>Football / Sports</option><option>Open world</option><option>Survival</option><option>Role-playing</option><option>Simulation</option><option>Platformer</option></select></div>
+     <div><label for="platform">PLATFORM</label><select id="platform"><option>Android and PC</option><option>Android</option><option>PC</option><option>Web browser</option></select></div>
+    </div>
+    <button id="runAI" class="primary">✦ Generate with AI</button>
+    <p class="tiny">AI generation requires your own API key on the server. API usage is not unlimited-free.</p>
+    <div class="samples"><b>Quick prompts</b>
+     <button class="sample" data-prompt="Design a realistic 3D military FPS game in a modern city with missions, fictional weapons, vehicles, enemy AI and mobile controls.">Military FPS</button>
+     <button class="sample" data-prompt="Design an open-world driving game with realistic cars, traffic, roads, garages and challenges.">Driving</button>
+     <button class="sample" data-prompt="Design a 3D football game with teams, stadiums, passing, shooting, tournaments and touch controls.">Football</button>
+    </div>
+   </div>
+
+   <div class="rightcol">
+    <div class="panel preview">
+     <div class="between"><h2>Scene preview</h2><span class="tiny">VISUAL PLACEHOLDER</span></div>
+     <div class="scene"><div class="planet"></div><div class="platform"></div><div class="scene-caption"><b id="sceneName">Your game world</b><small>AI design preview</small></div></div>
+     <p class="tiny">This is a visual placeholder, not a generated playable 3D world.</p>
+    </div>
+    <div class="panel output" id="output"><div class="empty"><div>✧</div><h2>Your AI results appear here</h2><p>Choose an AI tool, write a prompt and generate your first game design.</p></div></div>
+   </div>
+  </section>
+  <footer>HH AI Game Studio · Made for Hassan · Keep API keys private</footer>
+ </main>
+</div>
+<script src="app.js"></script>
+</body></html>
